@@ -253,6 +253,8 @@ h1 {
   }
 }
 
+/* Logos */
+
 .logos {
   background-color: var(--base-100);
   border-radius: 30px;
@@ -290,6 +292,8 @@ h1 {
     transform: translateX(-100%);
   }
 }
+
+/* Skills */
 
 h2 {
   font-size: 4rem;
@@ -333,11 +337,53 @@ h3 {
         margin-right: 100px;
         margin-bottom: 20px;
         li {
-          display: inline-block;
-          background-color: var(--base-bg-4);
-          padding: 10px 20px;
-          border-radius: 15px;
-          margin-bottom: 10px;
+          width: 135px;
+          padding-right: 30px;
+        }
+        /* Progress Bar */
+        .main-bar {
+          display: flex;
+          align-items: baseline;
+        }
+        .bar {
+          width: 100%;
+          background-color: #fff;
+          margin-bottom: 20px;
+          border-radius: 10px;
+        }
+        .progress {
+          height: 5px;
+          border-radius: 10px;
+        }
+        .html,
+        .css,
+        .js,
+        .react,
+        .nodejs,
+        .express,
+        .php {
+          background-color: var(--base-bg-5);
+        }
+        .html {
+          width: 95%;
+        }
+        .css {
+          width: 80%;
+        }
+        .js {
+          width: 70%;
+        }
+        .react {
+          width: 75%;
+        }
+        .nodejs {
+          width: 55%;
+        }
+        .express {
+          width: 55%;
+        }
+        .php {
+          width: 65%;
         }
       }
     }
@@ -349,3 +395,5 @@ h3 {
     }
   }
 }
+
+/* Working Experience */
