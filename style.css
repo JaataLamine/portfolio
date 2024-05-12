@@ -20,6 +20,7 @@
   --blue-800: #0a61ae;
   --logo: #2f3e46;
   --fifth: #cad2c5;
+  --base-button: #52796f;
 }
 
 body {
@@ -141,9 +142,37 @@ header {
 
 /* Main */
 
+.container {
+  max-width: 1440px;
+  margin: auto;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @media (max-width: 1440px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 10px;
+  small {
+    display: block;
+    font-weight: 100;
+  }
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
+}
+
 .hero {
   display: flex;
-  margin-top: 30px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
   .hero-blue {
     flex: 1;
     background-color: var(--blue-100);
@@ -152,6 +181,26 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    span {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .call-to-action {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      a {
+        margin-right: 10px;
+        /* margin-bottom: 10px; */
+      }
+    }
+    .social-media {
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
   .hero-profile {
     flex: 1;
@@ -165,5 +214,73 @@ header {
       margin-top: -60px;
       max-width: 600px;
     }
+  }
+}
+
+/* Contact & Resume Button */
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: var(--base-button);
+  color: var(--base-100);
+  border-radius: 10px;
+  transition: ease 0.3s all;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+  &.white {
+    background-color: white;
+    color: var(--base-800);
+    &:hover {
+      background-color: var(--base-100);
+      color: var(--base);
+    }
+  }
+  &.black {
+    background-color: black;
+    color: white;
+    &:hover {
+      background-color: var(--base);
+      color: var(--base-100);
+    }
+  }
+}
+
+.logos {
+  background-color: var(--base-100);
+  border-radius: 30px;
+  padding: 30px 0;
+  @media (max-width: 1440px) {
+    border-radius: 0;
+  }
+
+  .marquee {
+    width: 100vw;
+    max-width: 100%;
+    height: 128px;
+    overflow: hidden;
+    position: relative;
+    .track {
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 40s linear infinite;
+      display: flex;
+      gap: 30px;
+      img {
+        /* width: 7rem; */
+        height: 7.75rem;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
