@@ -143,13 +143,27 @@ header {
 
 .hero {
   display: flex;
+  margin-top: 30px;
   .hero-blue {
     flex: 1;
+    background-color: var(--blue-100);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .hero-profile {
     flex: 1;
     background: var(--fifth);
     border-radius: 30px;
     padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img {
+      margin-top: -60px;
+      max-width: 600px;
+    }
   }
 }
